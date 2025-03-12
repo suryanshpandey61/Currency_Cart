@@ -9,6 +9,7 @@ const Home: React.FC = () => {
     <div className=''>
       
         <Navbar/>
+        <Front/>
       
     </div>
   );
