@@ -4,23 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 const Navbar: React.FC = () => {
   return (
-    <div className="w-[100%] navbar-bg">
+    <div className="w-[100%] p-2 bg-[#081052]">
       <div className="w-[70%]  mx-auto flex justify-between">
         {/* logo */}
-        <div>
+        <div className="w-[50%]">
           <Image src={Logo} alt="Currency Cart Logo" />
         </div>
-        <div className="flex gap-x-[5%] items-center ">
+        <div className="flex gap-x-[3%] w-[50%] justify-end items-center ">
           {/* login btn  */}
           <div>
             <Link href="/login">
-              <button className="bg-blue-700 px-[20px]">Login btn</button>
+              <button className="login-btn">Login btn</button>
             </Link>
           </div>
           {/* Signup btn  */}
           <div>
             <Link href="/signup">
-              <button className="bg-green-400 px-[20px]">Sign Up</button>
+              <button className="signup-btn ">Sign Up</button>
             </Link>
           </div>
         </div>

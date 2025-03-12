@@ -23,8 +23,61 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-.navbar-bg{
-  background-color: #FAACA8;
-background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
 
+/* From Uiverse.io by barisdogansutcu */ 
+.login-btn {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.login-btn:hover {
+  letter-spacing: 3px;
+  background-color: hsl(226, 79%, 42%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+.login-btn:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+.signup-btn {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.signup-btn:hover {
+  letter-spacing: 3px;
+  background-color: hsl(129, 87%, 49%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(20, 208, 10) 0px 7px 29px 0px;
+}
+
+.signup-btn:active {
+  letter-spacing: 3px;
+  background-color: hsl(149, 88%, 46%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(7, 216, 70) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
 }
