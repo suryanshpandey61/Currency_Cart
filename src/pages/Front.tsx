@@ -14,7 +14,7 @@ const Front: React.FC = () => {
     <div className="w-[100%]">
       <div className="w-[70%] border mt-[5%] p-[2%] mx-auto  flex flex-col">
         {/* Amount div  */}
-        <div className="flex w-[80%] gap-x-[2%] mx-auto">
+        <div className="flex w-[80%] justify-between mx-auto">
           <h1 className="text-[2rem]">Amount</h1>
           <input
             type="number"
@@ -25,7 +25,7 @@ const Front: React.FC = () => {
           />
         </div>
         {/* From div  */}
-        <div className="flex mx-auto gap-x-[6%] mt-[2%] w-[80%]">
+        <div className="flex mx-auto justify-between mt-[2%] w-[80%]">
           <h1 className="text-[2rem]">From</h1>
           <input
             type="text"
@@ -35,7 +35,7 @@ const Front: React.FC = () => {
           />
         </div>
         {/* To div  */}
-        <div className="flex mx-auto gap-x-[10.5%] mt-[2%] w-[80%]">
+        <div className="flex mx-auto justify-between mt-[2%] w-[80%]">
           <h1 className="text-[2rem]">To</h1>
           <input
             type="text"
@@ -50,7 +50,8 @@ const Front: React.FC = () => {
         <div className="flex  mx-auto mt-[2%] text-[2rem] w-[80%]">
           <h1>Calculated Amount : {convertedAmount}</h1>
         </div>
-        <div className="flex mx-auto w-[80%] justify-between">
+        {/* btn div  */}
+        <div className="flex mx-auto mt-[2%] w-[80%] justify-between">
           {/* Convert btn  */}
 
           <button className="convert-btn">
