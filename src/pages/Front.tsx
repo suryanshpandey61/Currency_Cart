@@ -54,7 +54,9 @@ const Front: React.FC = () => {
         <div className="flex mx-auto mt-[2%] w-[80%] justify-between">
           {/* Convert btn  */}
 
-          <button className="convert-btn">
+          <button className="convert-btn"
+          onClick={handleConversionRate}
+          >
            
             <span>Convert</span>
           </button>
