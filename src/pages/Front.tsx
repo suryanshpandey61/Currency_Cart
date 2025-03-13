@@ -11,8 +11,8 @@ const Front: React.FC = () => {
   };
 
   return (
-    <div className="w-[100%]">
-      <div className="w-[70%] border mt-[5%] p-[2%] mx-auto  flex flex-col">
+    <div className="w-[100%] pt-[5%] pb-[4%] front-bg">
+      <div className="w-[70%] border  p-[2%] mx-auto  flex flex-col">
         {/* Amount div  */}
         <div className="flex w-[80%] justify-between mx-auto">
           <h1 className="text-[2rem]">Amount</h1>
@@ -48,7 +48,7 @@ const Front: React.FC = () => {
           <h1>1 USDT = {conversionRate} THB</h1>
         </div>
         <div className="flex  mx-auto mt-[2%] text-[2rem] w-[80%]">
-          <h1>Calculated Amount : {convertedAmount}</h1>
+          <h1>Calculated Amount : {convertedAmount} THB</h1>
         </div>
         {/* btn div  */}
         <div className="flex mx-auto mt-[2%] w-[80%] justify-between">

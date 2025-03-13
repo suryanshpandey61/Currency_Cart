@@ -8,7 +8,10 @@ const Navbar: React.FC = () => {
       <div className="w-[70%]  mx-auto flex justify-between">
         {/* logo */}
         <div className="w-[50%]">
+          <Link href="/">
           <Image src={Logo} alt="Currency Cart Logo" />
+          </Link>
+         
         </div>
         <div className="flex gap-x-[3%] w-[50%] justify-end items-center ">
           {/* login btn  */}
