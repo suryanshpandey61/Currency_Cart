@@ -1,4 +1,3 @@
-
 import React from 'react'; 
 import '../../src/app/globals.css';
 import Front from './Front';

@@ -1,65 +1,69 @@
 import React, { useState } from "react";
 
 const Front: React.FC = () => {
- 
-    const [ amount, setAmount ] = useState<number>(0);
-    const [ convertedAmount, setConvertedAmount ] = useState<number>(0);
+  const [amount, setAmount] = useState<number>(0);
+  const [convertedAmount, setConvertedAmount] = useState<number>(0);
 
-    const conversionRate = 33.86;
+  const conversionRate = 33.86;
 
-    const  handleConversionRate = () => {
-              setConvertedAmount(amount*conversionRate);
-    }
+  const handleConversionRate = () => {
+    setConvertedAmount(amount * conversionRate);
+  };
 
-
-
-
-    return(
-        <div className="w-[100%]">
-            
-            <div className="w-[70%]">
-                 {/* Amount div  */}
-                 <div>
-                    Amount 
-                    <input type="number"
-                      value={amount}
-                      placeholder="Enter amount in USDT"
-                      onChange={(e)=>setAmount(parseFloat(e.target.value))}
-                      className="border"
-                    />
-                 </div>
-                 {/* From div  */}
-                 <div>
-                    From 
-                    <input type="text"
-                      placeholder="USDT"
-                      readOnly 
-                      className="border"
-                    />
-                 </div>
-                  {/* To div  */}
-                  <div>
-                    To
-                    <input type="text" 
-                    placeholder="TBH (Thai Bhat)"
-                    readOnly
-                    className="border"
-                    />
-                  </div>
-                  <div>
-                    1 USDT = {conversionRate} THB
-                  </div>
-                  <div>
-                    Calculated Amount : {convertedAmount}
-                  </div>
-                  <div>
-                      <button 
-                      onClick={handleConversionRate}
-                      >Place Order</button>
-                  </div>
-            </div>
-
+  return (
+    <div className="w-[100%]">
+      <div className="w-[70%] border mt-[5%] p-[2%] mx-auto  flex flex-col">
+        {/* Amount div  */}
+        <div className="flex w-[80%] gap-x-[2%] mx-auto">
+          <h1 className="text-[2rem]">Amount</h1>
+          <input
+            type="number"
+            value={amount}
+            placeholder="Enter amount in USDT"
+            onChange={(e) => setAmount(parseFloat(e.target.value))}
+            className="border w-[80%] pl-[2%] text-[1.5rem] rounded-md"
+          />
         </div>
-    )
-}
+        {/* From div  */}
+        <div className="flex mx-auto gap-x-[6%] mt-[2%] w-[80%]">
+          <h1 className="text-[2rem]">From</h1>
+          <input
+            type="text"
+            placeholder="USDT"
+            readOnly
+            className="border w-[80%] pl-[2%] text-[1.5rem] rounded-md"
+          />
+        </div>
+        {/* To div  */}
+        <div className="flex mx-auto gap-x-[10.5%] mt-[2%] w-[80%]">
+          <h1 className="text-[2rem]">To</h1>
+          <input
+            type="text"
+            placeholder="TBH (Thai Bhat)"
+            readOnly
+            className="border w-[80%] pl-[2%] text-[1.5rem] rounded-md"
+          />
+        </div>
+        <div className="flex mx-auto mt-[2%] text-[2rem] w-[80%]">
+          <h1>1 USDT = {conversionRate} THB</h1>
+        </div>
+        <div className="flex  mx-auto mt-[2%] text-[2rem] w-[80%]">
+          <h1>Calculated Amount : {convertedAmount}</h1>
+        </div>
+        <div className="flex mx-auto w-[80%] justify-between">
+          {/* Convert btn  */}
+
+          <button className="convert-btn">
+           
+            <span>Convert</span>
+          </button>
+          {/* place order btn  */}
+          <button className="placeorder-btn">
+            <span>Place Order</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default Front;
