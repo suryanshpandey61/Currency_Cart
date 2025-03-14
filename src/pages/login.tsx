@@ -1,9 +1,10 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 const login:React.FC = () => {
     return(
         <div>
-            This is  Login Page
+           <Navbar />
         </div>
     )
 }
