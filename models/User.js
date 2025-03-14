@@ -12,3 +12,7 @@ const UserSchema = new mongoose.Schema({
         required:[true,"Enter strong pass which includes Upper & Lower Case"],
     }
 })
+
+const User  = mongoose.models.User || mongoose.model('User',UserSchema);
+
+export default User;
