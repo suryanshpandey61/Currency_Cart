@@ -5,6 +5,7 @@ const login:React.FC = () => {
     return(
         <div>
            <Navbar />
+           login page
         </div>
     )
 }
