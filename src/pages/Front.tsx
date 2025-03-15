@@ -11,7 +11,7 @@ const Front: React.FC = () => {
   };
 
   return (
-    <div className="w-[100%] pt-[5%] pb-[4%] front-bg">
+    <div className="w-[100%] pt-[5%]  min-h-screen front-bg">
       <div className="w-[70%] border  p-[2%] mx-auto  flex flex-col">
         {/* Amount div  */}
         <div className="flex w-[80%] justify-between mx-auto">

@@ -7,9 +7,9 @@ const Home: React.FC = () => {
   return (
     <div className="">
       <Navbar />
-      <div>
+     
         <Front />
-      </div>
+      
     </div>
   );
 };
