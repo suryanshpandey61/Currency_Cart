@@ -70,7 +70,7 @@ const login: React.FC = () => {
 
           <div className="mt-6 text-center">
             <div className="text-sm text-gray-600">
-              Don't have an account?{" "}
+              Don't have an account?
              <Link href="signup">  Sign Up
              </Link>
               
