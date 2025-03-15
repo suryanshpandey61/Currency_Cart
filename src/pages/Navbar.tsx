@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
           {/* login btn  */}
           <div>
             <Link href="/login">
-              <button className="login-btn">Login btn</button>
+              <button className="login-btn">Login</button>
             </Link>
           </div>
           {/* Signup btn  */}
