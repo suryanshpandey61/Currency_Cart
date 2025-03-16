@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../assests/Logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import "../../src/app/globals.css";
 const Navbar: React.FC = () => {
   return (
     <div className="w-[100%] p-2 bg-[#081052]">

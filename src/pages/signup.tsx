@@ -1,4 +1,4 @@
-
+import "../../src/app/globals.css";
 import React from "react";
 import Navbar from "./Navbar";
 import Link from "next/link";
@@ -13,7 +13,7 @@ const signup: React.FC = () => {
       <Navbar />
       <div className="flex justify-center items-center flex-grow signup-bg">
         <div className="w-[90%] lg:pt-0 mt-2 max-w-lg p-6 bg-white rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6 ">Create Account</h2>
+          <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6 pt-2 ">Create Account</h2>
 
           <form className="space-y-4">
             <div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "../../src/app/globals.css";
 const Front: React.FC = () => {
   const [amount, setAmount] = useState<number>(0);
   const [convertedAmount, setConvertedAmount] = useState<number>(0);
