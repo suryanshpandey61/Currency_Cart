@@ -12,39 +12,39 @@ const Front: React.FC = () => {
 
   return (
     <div className="w-[100%] pt-[5%]  min-h-screen front-bg">
-      <div className="w-[70%] border  p-[2%] mx-auto  flex flex-col">
+      <div className="lg:w-[70%] w-[90%] border rounded-md  p-[2%] mx-auto  flex flex-col">
         {/* Amount div  */}
-        <div className="flex w-[80%] justify-between mx-auto">
-          <h1 className="text-[2rem]">Amount</h1>
+        <div className="flex lg:w-[80%] lg:pt-0 pt-2 w-[90%] justify-between mx-auto">
+          <h1 className="lg:text-[2rem] text-[1.5rem]">Amount</h1>
           <input
             type="number"
             value={amount}
             placeholder="Enter amount in USDT"
             onChange={(e) => setAmount(parseFloat(e.target.value))}
-            className="border w-[80%] pl-[2%] text-[1.5rem] rounded-md"
+            className="border w-[60%] lg:w-[80%] pl-[2%] text-[1.5rem] rounded-md"
           />
         </div>
         {/* From div  */}
-        <div className="flex mx-auto justify-between mt-[2%] w-[80%]">
-          <h1 className="text-[2rem]">From</h1>
+        <div className="flex mx-auto justify-between mt-[2%] lg:w-[80%] lg:pt-0 pt-2 w-[90%]">
+          <h1 className="lg:text-[2rem] text-[1.5rem] ">From</h1>
           <input
             type="text"
             placeholder="USDT"
             readOnly
-            className="border w-[80%] pl-[2%] text-[1.5rem] rounded-md"
+            className="border lg:w-[80%] w-[60%] pl-[2%] text-[1.5rem] rounded-md"
           />
         </div>
         {/* To div  */}
-        <div className="flex mx-auto justify-between mt-[2%] w-[80%]">
-          <h1 className="text-[2rem]">To</h1>
+        <div className="flex mx-auto justify-between mt-[2%] lg:w-[80%] lg:pt-0 pt-2  w-[90%]">
+          <h1 className="lg:text-[2rem] text-[1.5rem]">To</h1>
           <input
             type="text"
             placeholder="TBH (Thai Bhat)"
             readOnly
-            className="border w-[80%] pl-[2%] text-[1.5rem] rounded-md"
+            className="border lg:w-[80%] w-[60%] pl-[2%] lg:text-[1.5rem] text-[1.2rem] rounded-md"
           />
         </div>
-        <div className="flex mx-auto mt-[2%] text-[2rem] w-[80%]">
+        <div className="flex mx-auto mt-[2%] lg:text-[2rem] text-[1.5rem] w-[80%]">
           <h1>1 USDT = {conversionRate} THB</h1>
         </div>
         <div className="flex  mx-auto mt-[2%] text-[2rem] w-[80%]">

@@ -5,23 +5,23 @@ import Link from "next/link";
 const Navbar: React.FC = () => {
   return (
     <div className="w-[100%] p-2 bg-[#081052]">
-      <div className="w-[70%]  mx-auto flex justify-between">
+      <div className="lg:w-[70%] w-[100%]      mx-auto flex justify-between">
         {/* logo */}
-        <div className="w-[50%]">
+        <div className="lg:w-[50%] w-[20%] ">
           <Link href="/">
           <Image src={Logo} alt="Currency Cart Logo" />
           </Link>
          
         </div>
-        <div className="flex gap-x-[3%] w-[50%] justify-end items-center ">
+        <div className="flex gap-x-[3%] w-[50%]   justify-end items-center ">
           {/* login btn  */}
-          <div>
+          <div className="">
             <Link href="/login">
-              <button className="login-btn">Login</button>
+              <button className="login-btn ">Login</button>
             </Link>
           </div>
           {/* Signup btn  */}
-          <div>
+          <div className="">
             <Link href="/signup">
               <button className="signup-btn ">Sign Up</button>
             </Link>
