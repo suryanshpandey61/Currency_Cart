@@ -12,7 +12,7 @@ const signup: React.FC = () => {
     <div className="min-h-screen bg-gray-100 flex flex-col">
       <Navbar />
       <div className="flex justify-center items-center flex-grow signup-bg">
-        <div className="w-full max-w-lg p-6 bg-white rounded-lg shadow-md">
+        <div className="w-[90%] lg:pt-0 pt-1 max-w-lg p-6 bg-white rounded-lg shadow-md">
           <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Create Account</h2>
 
           <form className="space-y-4">
