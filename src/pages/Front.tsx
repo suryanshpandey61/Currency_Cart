@@ -10,6 +10,8 @@ const Front: React.FC = () => {
     setConvertedAmount(amount * conversionRate);
   };
 
+  
+
   return (
     <div className="w-[100%] lg:pt-[5%] pt-[50px]  min-h-screen front-bg">
       <div className="lg:w-[70%] w-[90%] border rounded-md  p-[2%] mx-auto  flex flex-col">
@@ -66,6 +68,7 @@ const Front: React.FC = () => {
           </button>
         </div>
       </div>
+      
     </div>
   );
 };
