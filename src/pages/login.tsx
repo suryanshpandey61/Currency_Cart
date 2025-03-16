@@ -12,7 +12,7 @@ const login: React.FC = () => {
     <div className="min-h-screen  flex flex-col">
       <Navbar />
       <div className="flex justify-center items-center flex-grow login-bg">
-        <div className="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
+        <div className="w-[90%] max-w-sm p-6 bg-white rounded-lg shadow-md">
           <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Login</h2>
 
           <form className="space-y-4">
