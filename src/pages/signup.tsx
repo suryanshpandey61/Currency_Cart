@@ -15,7 +15,7 @@ const signup: React.FC = () => {
         <div className="w-[90%] lg:pt-0 mt-2 max-w-lg p-6 bg-white rounded-lg shadow-md mb-2">
           <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6 pt-2 ">Create Account</h2>
 
-          <form className="space-y-4">
+          <form className="space-y-2">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                 Full Name
