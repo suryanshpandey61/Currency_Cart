@@ -9,7 +9,7 @@ const signup: React.FC = () => {
   
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col">
+    <div className="min-h-screen bg-gray-200 flex flex-col">
       <Navbar />
       <div className="flex justify-center items-center flex-grow signup-bg">
         <div className="w-[90%] lg:pt-0 mt-2 max-w-lg p-5 bg-white rounded-lg shadow-md mb-2">
