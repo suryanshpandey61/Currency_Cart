@@ -4,10 +4,6 @@ import Link from "next/link";
 import "../../src/app/globals.css";
 const login: React.FC = () => {
 
-
-
-
-
   return (
     <div className="min-h-screen  flex flex-col">
       <Navbar />
