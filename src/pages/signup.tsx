@@ -1,9 +1,28 @@
 import "../../src/app/globals.css";
-import React from "react";
+import React,{useState}from "react";
+import { useRouter } from "next/router";
 import Navbar from "./Navbar";
 import Link from "next/link";
 
 const signup: React.FC = () => {
+
+  const[name,setName] = useState("");
+  const[email,setEmail] = useState("");
+  const[password,setPassword] = useState("");
+  const[confirmPassword,setConfirmPassword] = useState("");
+  const[error,setError] = useState("");
+  const router = useRouter();
+
+  const handleSubmit = async (e:React.FormEvent) => {
+     
+      e.preventDefault();
+
+      if(password!==confirmPassword){
+        setError("Password do not match please again check the pasword");
+        return;
+      }
+
+  }
 
 
   return (
