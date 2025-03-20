@@ -27,7 +27,7 @@ export async function POST(req:Request){
         );
     }catch(error){
         console.log(error);
-        return NextResponse.json({error:"Internal Server Error"},
+        return NextResponse.json({error:"Internal Server Error Can not push the data"},
             {status:500}
         )
     }
