@@ -22,7 +22,22 @@ const signup: React.FC = () => {
         return;
       }
 
-  }
+      const response = await fetch("/api/auth/signup",{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json",
+        },
+        body:JSON.stringify({name,email,password,confirmPassword}),
+      });
+
+      const data=await response.json();
+
+      if(response.ok){
+        router.push("/login");
+      }else{
+        setError(data.error || "Something went Wrong");
+      }
+  };
 
 
   return (
@@ -32,7 +47,11 @@ const signup: React.FC = () => {
         <div className="w-[90%] lg:pt-0 mt-2 max-w-lg p-5 bg-white rounded-lg shadow-md mb-2">
           <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6 pt-2 ">Create Account</h2>
 
-          <form className="space-y-2">
+          {error && <div className="text-red-500 text-center mb-4">{error}</div>}
+
+          <form 
+          onSubmit={handleSubmit}
+          className="space-y-2">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                 Full Name
@@ -40,6 +59,8 @@ const signup: React.FC = () => {
               <input
                 id="name"
                 type="text"
+                value={name}
+                onChange={(e)=>setName(e.target.value)}
                 placeholder="Enter your full name"
                 required
                 className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -53,6 +74,8 @@ const signup: React.FC = () => {
               <input
                 id="email"
                 type="email"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required
                 className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -66,6 +89,8 @@ const signup: React.FC = () => {
               <input
                 id="password"
                 type="password"
+                value={password}
+                onChange={(e)=>setPassword(e.target.value)}
                 placeholder="Enter your password"
                 required
                 className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -79,6 +104,8 @@ const signup: React.FC = () => {
               <input
                 id="confirm-password"
                 type="password"
+                value={confirmPassword}
+                onChange={(e)=>setConfirmPassword(e.target.value)}
                 placeholder="Confirm your password"
                 required
                 className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
