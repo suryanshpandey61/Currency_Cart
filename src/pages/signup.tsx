@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Navbar from "./Navbar";
 import Link from "next/link";
 
+
 const signup: React.FC = () => {
 
   const[name,setName] = useState("");
