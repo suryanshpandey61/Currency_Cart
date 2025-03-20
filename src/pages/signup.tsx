@@ -6,8 +6,6 @@ import Link from "next/link";
 const signup: React.FC = () => {
 
 
-  
-
   return (
     <div className="min-h-screen bg-gray-200 flex flex-col">
       <Navbar />
