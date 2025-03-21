@@ -1,11 +1,12 @@
 import "../../src/app/globals.css";
-import React,{useState}from "react";
+import React , { useState }from "react";
 import { useRouter } from "next/router";
 import Navbar from "./Navbar";
 import Link from "next/link";
+import { toast, ToastContainer } from 'react-toastify';  
+import 'react-toastify/dist/ReactToastify.css'; 
 
-
-const signup: React.FC = () => {
+const Signup: React.FC = () => {
 
   const[name,setName] = useState("");
   const[email,setEmail] = useState("");
@@ -34,8 +35,14 @@ const signup: React.FC = () => {
       const data=await response.json();
 
       if(response.ok){
-        router.push("/login");
+        toast.success("User Created Successfully! Please log in.");
+        setName("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+        // router.push("/login");
       }else{
+        toast.error(data.error || "An error occurred While Signing Up");
         setError(data.error || "Something went Wrong");
       }
   };
@@ -134,8 +141,9 @@ const signup: React.FC = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
 
-export default signup;
+export default Signup;
