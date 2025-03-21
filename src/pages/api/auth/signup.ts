@@ -1,9 +1,9 @@
 import { db } from "@/db/index";
 import { usersTable } from "@/db/schema";
 import bcrypt from "bcryptjs";
-import { NextApiRequest, NextApiResponse } from "next"; // Import the correct types
+import { NextApiRequest, NextApiResponse } from "next";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {  // Use correct types here
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {  
   if (req.method === "POST") {
     try {
       const { name, email, password, confirmPassword } = req.body;

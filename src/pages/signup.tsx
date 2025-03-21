@@ -1,6 +1,5 @@
 import "../../src/app/globals.css";
 import React , { useState }from "react";
-import { useRouter } from "next/router";
 import Navbar from "./Navbar";
 import Link from "next/link";
 import { toast, ToastContainer } from 'react-toastify';  
@@ -13,7 +12,7 @@ const Signup: React.FC = () => {
   const[password,setPassword] = useState("");
   const[confirmPassword,setConfirmPassword] = useState("");
   const[error,setError] = useState("");
-  const router = useRouter();
+
 
   const handleSubmit = async (e:React.FormEvent) => {
      
@@ -40,7 +39,7 @@ const Signup: React.FC = () => {
         setEmail("");
         setPassword("");
         setConfirmPassword("");
-        // router.push("/login");
+        
       }else{
         toast.error(data.error || "An error occurred While Signing Up");
         setError(data.error || "Something went Wrong");
